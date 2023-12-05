@@ -1,0 +1,103 @@
+/* General Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    color: #333; /* Main text color */
+    background-color: #fff; /* Main background color */
+  }
+  
+  /* Utilities */
+  .container {
+    padding: 2rem;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Navigation */
+  .navbar {
+    background-color: #f8f9fa; /* Adjust to match your navbar color */
+  }
+  
+  .nav-link {
+    color: #333; /* Adjust to match your design */
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    background-color: #ecebff; /* Replace with the actual color of your hero section */
+    color: #333; /* Replace with the actual text color if different */
+    padding: 4rem 0; /* Add padding to match your design */
+  }
+  
+  .hero-section h1 {
+    font-size: 2rem; /* Adjust font-size as needed */
+    margin-bottom: 1rem;
+  }
+  
+  .hero-section p {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Button */
+  .btn-primary {
+    background-color: #6c63ff; /* Button background color */
+    border: none; /* Remove border if not needed */
+    padding: 0.75rem 1.5rem; /* Button padding */
+    border-radius: 0.5rem; /* Button border-radius */
+  }
+  
+  /* Projects Section */
+  .projects-section {
+    padding: 4rem 0; /* Section padding */
+  }
+  
+  .projects-section h2 {
+    margin-bottom: 2rem; /* Spacing after the heading */
+  }
+  
+  /* About Section */
+  .about-section {
+    background-color: #ecebff; /* Background color of about section */
+    padding: 4rem 0; /* Section padding */
+  }
+  
+  .about-section h2 {
+    margin-bottom: 1rem; /* Spacing after the heading */
+  }
+  
+  /* Contact Section */
+  .contact-section {
+    padding: 4rem 0; /* Section padding */
+  }
+  
+  .contact-section h2 {
+    margin-bottom: 1rem; /* Spacing after the heading */
+  }
+  
+  /* Input Styles */
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%; /* Full width */
+    padding: 0.75rem; /* Padding inside inputs */
+    margin-bottom: 1rem; /* Spacing after each input */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 0.25rem; /* Border radius */
+  }
+  
+  input[type="submit"] {
+    background-color: #6c63ff; /* Submit button background color */
+    color: white; /* Submit button text color */
+    padding: 0.75rem 1.5rem; /* Padding */
+    border: none; /* Remove border */
+    border-radius: 0.5rem; /* Border radius */
+    cursor: pointer; /* Cursor to indicate clickable */
+  }
+  
+  /* Social Links */
+  .social-links {
+    background-color: #f8f9fa; /* Background color for footer */
+    padding: 1rem 0; /* Padding for footer */
+  }
+  
