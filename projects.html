@@ -3,11 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MC Sacay - Projects</title>
+  <title>Portfolio - MC Sacay</title>
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome CDN -->
+  <script src="https://kit.fontawesome.com/9b2801b99a.js" crossorigin="anonymous"></script>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <!-- Custom CSS -->
@@ -15,58 +17,93 @@
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <!-- Brand/logo -->
-    <a class="navbar-brand" href="index.html">Logo</a>
-    <!-- Toggler/collapsible Button -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav ml-auto">
-        <a class="nav-item nav-link" href="index.html">Home</a>
-        <a class="nav-item nav-link" href="about.html">About</a>
-        <a class="nav-item nav-link active" href="projects.html">Projects</a>
-        <a class="nav-item nav-link" href="contact.html">Contact</a>
-      </div>
-    </div>
-  </nav>
+  <div class="wrapper">
+    <header>
 
-  <!-- Projects Section -->
-  <section class="projects-section">
-    <div class="container">
-      <h1>Projects</h1>
-      <!-- Project Items -->
-      <div class="project-item">
-        <h2>Web Portfolio</h2>
-        <img src="path-to-your-web-portfolio-image.jpg" alt="Web Portfolio" class="img-fluid">
-        <p>A showcase of my HTML, CSS, Figma, and Bootstrap skills, featuring top projects from my Interactive Media Design studies.</p>
-      </div>
-      <div class="project-item">
-        <h2>Video Interview with Ceejay Guerzon</h2>
-        <img src="path-to-your-video-interview-image.jpg" alt="Video Interview with Ceejay Guerzon" class="img-fluid">
-        <p>A multifaceted video project where I directed, recorded, and edited an interview with Ceejay Guerzon, co-produced with classmate Paulo Garcia.</p>
-      </div>
-      <div class="project-item">
-        <h2>Photography Portfolio</h2>
-        <img src="path-to-your-photography-portfolio-image.jpg" alt="Photography Portfolio" class="img-fluid">
-        <p>A captivating collection of street, portrait, and nature photography, displaying my versatility and eye for detail.</p>
-      </div>
-      <div class="project-item">
-        <h2>Avatar Project</h2>
-        <img src="path-to-your-avatar-project-image.jpg" alt="Avatar Project" class="img-fluid">
-        <p>An Adobe Illustrator project featuring a cat avatar enjoying a tulip festival, optimized for iTunes, iPad, and iPhone displays.</p>
-      </div>
-    </div>
-  </section>
+      <!-- Skip Links -->
+      <ul class="skip-links">
+        <li class="skip-link-item">
+          <a href="#main" aria-label="Skip to Main Section">Skip to Main Content</a>
+        </li>
+        <li class="skip-link-item">
+          <a href="#footer" aria-label="Skip to Footer">Skip to Footer</a>
+        </li>
+      </ul>
+
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <!-- Brand/logo -->
+          <a class="navbar-brand" href="index.html"><img src="images/logo.svg" alt="Logo"></a>
+          <!-- Toggler/collapsible Button -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+              <a class="nav-item nav-link" href="index.html">Home</a>
+              <a class="nav-item nav-link" href="about.html">About</a>
+              <a class="nav-item nav-link active" href="projects.html">Projects</a>
+              <a class="nav-item nav-link" href="contact.html">Contact</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Projects Section -->
+      <section class="projects-section projects-page">
+        <div class="container">
+          <h1>Projects</h1>
+
+          <!-- Project Rows and Columns -->
+          
+          <!-- Project 1 -->
+          <div class="row">
+            <div class="row mb-4"> <!-- Add margin-bottom for spacing -->
+              <div class="col-md-6">
+                <img src="images/web-portfolio.png" alt="Web Portfolio" class="img-fluid">
+              </div>
+              <div class="col-md-6">
+                <h2>Web Portfolio</h2>
+                <p>A showcase of my HTML, CSS, Figma, and Bootstrap skills, featuring top projects from my Interactive Media Design studies.</p>
+              </div>
+            </div>
+
+          <!-- Project 2 -->
+          <div class="row mb-4">
+            <div class="col-md-6">
+              <img src="images/video-interview.png" alt="Video Interview with Ceejay Guerzon" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+              <h2>Video Interview with Ceejay Guerzon</h2>
+              <p>A short video project where I directed, recorded, and edited an interview with Ceejay Guerzon, co-produced with classmate Paulo Garcia.</p>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="row mb-4">
+            <div class="col-md-6">
+              <img src="images/avatar.png" alt="Avatar Project" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+              <h2>Avatar Project</h2>
+              <p>An Adobe Illustrator project featuring a cat avatar optimized for iTunes, iPad, and iPhone displays.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+  </div>
 
   <!-- Footer -->
   <footer class="footer text-center">
     <div class="container">
-      <a href="#"><img src="path-to-facebook-icon.png" alt="Facebook Icon"></a>
-      <a href="#"><img src="path-to-twitter-icon.png" alt="Twitter Icon"></a>
-      <a href="#"><img src="path-to-linkedin-icon.png" alt="LinkedIn Icon"></a>
+      <a href="https://facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a>
+      <a href="https://linkedin.com"><i class="fa-brands fa-linkedin-in"></i></a>
     </div>
   </footer>
 

@@ -1,103 +1,329 @@
+/* --------------------CSS RESET START-------------------- */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*--------------------CSS RESET END-------------------- */
+
+/* CSS Variables */
+
+:root {
+  /* Color scheme */
+  --primary-color: #ecebff;
+  --secondary-color: #yourSecondaryColor;
+  --background-color: #fff;
+  --text-color: #333;
+  --button-color: #6c63ff;
+  --button-hover-color: #5349ff;
+  --footer-background-color: #f8f9fa;
+
+  /* Spacing and layout */
+  --section-padding: 20px;
+  --container-width: 1200px;
+  --border-radius: 8px;
+  --box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
 /* General Styles */
 body {
     font-family: 'Inter', sans-serif;
-    color: #333; /* Main text color */
-    background-color: #fff; /* Main background color */
+    color: var(--text-color)
+    background-color: (var(--background-color))
+    height: 100%;
   }
   
-  /* Utilities */
-  .container {
-    padding: 2rem;
+/* Utilities */
+.container {
+  padding: 2rem;
+  max-width: var(--container-width);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+footer.footer {
+  margin-top: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Skip Links */
+
+.skip-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skip-links a {
+  position: absolute;
+  top: -3em;
+  left: 0;
+  background-color: black;
+  color: white;
+  padding: 0.5em;
+  z-index: 100; /* Ensures the link is above other content */
+  transition: top 0.3s; /* Smooth transition for better UX */
+}
+
+.skip-links a:focus {
+  top: 0;
+}
+
+/* Navigation */
+.navbar {
+  background-color: var(--background-color);
+}
+
+.navbar-brand img {
+  height: 40px; /* Adjust as needed */
+  width: auto;
+}
+
+.nav-link {
+  color: var(--text-color);
+}
+
+/* Hero Section */
+.hero-section {
+  font-size: 1.5rem;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 4rem;
+}
+
+.hero-section h1 {
+  font-size: 2rem; /* Adjust font-size as needed */
+  margin-bottom: 1rem;
+}
+
+.hero-section p {
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Button */
+.btn-primary {
+  background-color: #6c63ff;
+  border: none;
+  padding: 0.75rem 1.5rem; /* Button padding */
+  border-radius: 0.5rem; /* Button border-radius */
+}
+
+.btn-secondary {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem; /* Button border-radius */
+}
+
+/* Projects Section */
+.projects-section {
+  padding: 4rem; /* Section padding */
+}
+
+.projects-page {
+  background-color: var(--primary-color);
+}
+
+.projects-section h1 {
+  margin-bottom: 4rem; /* Spacing after the heading */
+  font-size: 2rem;
+  text-align: center;
+}
+
+.projects-section h2 {
+  margin-bottom: 5rem; /* Spacing after each project title */
+  font-size: 1.5rem;
+}
+
+.projects-section h3 {
+  margin-top: 3rem; /* Spacing before each project title */
+  font-size: 1.25rem;
+}
+
+.projects-section .btn-secondary {
+  margin: 3.5rem;
+}
+
+/* Styling for images within project section */
+.projects-section img.img-fluid {
+  transition: transform 0.3s ease; /* Animation effect */
+  border-radius: 8px; /* Adds rounded corners */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds a subtle shadow */
+  object-fit: cover; /* Keeps the aspect ratio and covers the area */
+  height: 400px; /* Set a fixed height */
+  width: 100%; /* Ensures the width is always 100% of the container */
+}
+
+/* Hover effect */
+.projects-section img.img-fluid:hover {
+  transform: scale(1.05); /* Slightly enlarges the image */
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .project-item {
+    display: flex;
+    align-items: center;
   }
-  
-  .text-center {
-    text-align: center;
+
+  .project-item img {
+    margin-right: 2rem; /* Space to the right of the image */
   }
+}
+
+/* About Section */
+.about-section {
+  background-color: var(--primary-color);
+  padding: 4rem; /* Section padding */
+}
+
+.about-section h1 {
+  margin: 4rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.about-section h2, p {
+  margin: 4rem;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 4rem; /* Section padding */
+}
+
+.contact-section p {
+  margin: 2rem;
+  text-align: center;
+}
+
+.contact-section h1 {
+  font-size: 2rem;
+  margin-bottom: 4rem; /* Spacing after the heading */
+  text-align: center;
+}
+
+.contact-section h2 {
+  margin-bottom: 2rem; /* Spacing after the heading */
+}
+
+.contact-page {
+  background-color: var(--primary-color);
+}
+
+/* Input Styles */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%; /* Full width */
+  padding: 0.75rem; /* Padding inside inputs */
+  margin-bottom: 1rem; /* Spacing after each input */
+  border: 1px solid #ccc; /* Border color */
+  border-radius: 0.25rem; /* Border radius */
+}
+
+input[type="submit"] {
+  background-color: #6c63ff; /* Submit button background color */
+  color: white; /* Submit button text color */
+  padding: 0.75rem 1.5rem; /* Padding */
+  border: none; /* Remove border */
+  border-radius: 0.5rem; /* Border radius */
+  cursor: pointer; /* Cursor to indicate clickable */
+}
+
+#fixed-size-textarea {
+  resize: none;  /* Disable resizing */
+  overflow: auto; 
+}
+
+footer i {
   
-  /* Navigation */
-  .navbar {
-    background-color: #f8f9fa; /* Adjust to match your navbar color */
-  }
-  
-  .nav-link {
-    color: #333; /* Adjust to match your design */
-  }
-  
-  /* Hero Section */
-  .hero-section {
-    background-color: #ecebff; /* Replace with the actual color of your hero section */
-    color: #333; /* Replace with the actual text color if different */
-    padding: 4rem 0; /* Add padding to match your design */
-  }
-  
+  margin: 5%;
+  color: var(--text-color);
+}
+
+
+/* ----Media Queries---- */
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
   .hero-section h1 {
-    font-size: 2rem; /* Adjust font-size as needed */
-    margin-bottom: 1rem;
+    font-size: 1.5rem;
   }
-  
-  .hero-section p {
-    margin-bottom: 1.5rem;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+  .hero-section h1 {
+    font-size: 1.75rem;
   }
-  
-  /* Button */
-  .btn-primary {
-    background-color: #6c63ff; /* Button background color */
-    border: none; /* Remove border if not needed */
-    padding: 0.75rem 1.5rem; /* Button padding */
-    border-radius: 0.5rem; /* Button border-radius */
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  .hero-section {
+    text-align: left;
+    padding-left: 60px;
   }
-  
-  /* Projects Section */
-  .projects-section {
-    padding: 4rem 0; /* Section padding */
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .hero-section h1 {
+    font-size: 2rem;
   }
-  
-  .projects-section h2 {
-    margin-bottom: 2rem; /* Spacing after the heading */
-  }
-  
-  /* About Section */
-  .about-section {
-    background-color: #ecebff; /* Background color of about section */
-    padding: 4rem 0; /* Section padding */
-  }
-  
-  .about-section h2 {
-    margin-bottom: 1rem; /* Spacing after the heading */
-  }
-  
-  /* Contact Section */
-  .contact-section {
-    padding: 4rem 0; /* Section padding */
-  }
-  
-  .contact-section h2 {
-    margin-bottom: 1rem; /* Spacing after the heading */
-  }
-  
-  /* Input Styles */
-  input[type="text"],
-  input[type="email"],
-  textarea {
-    width: 100%; /* Full width */
-    padding: 0.75rem; /* Padding inside inputs */
-    margin-bottom: 1rem; /* Spacing after each input */
-    border: 1px solid #ccc; /* Border color */
-    border-radius: 0.25rem; /* Border radius */
-  }
-  
-  input[type="submit"] {
-    background-color: #6c63ff; /* Submit button background color */
-    color: white; /* Submit button text color */
-    padding: 0.75rem 1.5rem; /* Padding */
-    border: none; /* Remove border */
-    border-radius: 0.5rem; /* Border radius */
-    cursor: pointer; /* Cursor to indicate clickable */
-  }
-  
-  /* Social Links */
-  .social-links {
-    background-color: #f8f9fa; /* Background color for footer */
-    padding: 1rem 0; /* Padding for footer */
-  }
-  
+}
+
+
+

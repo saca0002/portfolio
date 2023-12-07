@@ -3,11 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MC Sacay - About</title>
+  <title>Portfolio - MC Sacay</title>
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome CDN -->
+  <script src="https://kit.fontawesome.com/9b2801b99a.js" crossorigin="anonymous"></script>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <!-- Custom CSS -->
@@ -15,40 +17,60 @@
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <!-- Brand/logo -->
-    <a class="navbar-brand" href="index.html">Logo</a>
-    <!-- Toggler/collapsible Button -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav ml-auto">
-        <a class="nav-item nav-link" href="index.html">Home</a>
-        <a class="nav-item nav-link active" href="about.html">About</a>
-        <a class="nav-item nav-link" href="projects.html">Projects</a>
-        <a class="nav-item nav-link" href="contact.html">Contact</a>
-      </div>
-    </div>
-  </nav>
+  <div class="wrapper">
 
-  <!-- About Section -->
-  <section class="about-section">
-    <div class="container">
-      <h1>About</h1>
-      <p class="lead">Hello! I'm MC, a passionate government web developer dedicated to creating digital solutions that serve the public good.</p>
-      <p><strong>My work is driven by the belief that technology should be accessible, secure, and user-friendly.</strong></p>
-      <p>My expertise lies in translating complex governmental processes into seamless digital experiences, ensuring that every citizen can easily interact with their government online.</p>
-    </div>
-  </section>
+    <header>
+
+      <!-- Skip Links -->
+      <ul class="skip-links">
+        <li class="skip-link-item">
+          <a href="#main" aria-label="Skip to Main Section">Skip to Main Content</a>
+        </li>
+        <li class="skip-link-item">
+          <a href="#footer" aria-label="Skip to Footer">Skip to Footer</a>
+        </li>
+      </ul>
+
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <!-- Brand/logo -->
+          <a class="navbar-brand" href="index.html"><img src="images/logo.svg" alt="Logo"></a>
+          <!-- Toggler/collapsible Button -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+              <a class="nav-item nav-link" href="index.html">Home</a>
+              <a class="nav-item nav-link active" href="about.html">About</a>
+              <a class="nav-item nav-link" href="projects.html">Projects</a>
+              <a class="nav-item nav-link" href="contact.html">Contact</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- About Section -->
+      <section class="about-section">
+        <div class="container">
+          <h1>About</h1>
+          <p class="lead"><span class="font-weight-bold">Hello!</span> I'm MC Sacay, a passionate government web developer dedicated to creating digital solutions that serve the public good.</p>
+          <p class="lead"><span class="font-weight-bold">My work is driven by the belief that technology should be accessible, secure, and user-friendly.</span></p>
+          <p class="lead">My expertise lies in translating complex governmental processes into seamless digital experiences, ensuring that every citizen can easily interact with their government online.</p>
+        </div>
+      </section>
+    </main>
+  </div>
 
   <!-- Footer -->
   <footer class="footer text-center">
     <div class="container">
-      <a href="#"><img src="path-to-facebook-icon.png" alt="Facebook Icon"></a>
-      <a href="#"><img src="path-to-twitter-icon.png" alt="Twitter Icon"></a>
-      <a href="#"><img src="path-to-linkedin-icon.png" alt="LinkedIn Icon"></a>
+      <a href="https://facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a>
+      <a href="https://linkedin.com"><i class="fa-brands fa-linkedin-in"></i></a>
     </div>
   </footer>
 
