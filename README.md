@@ -1,26 +1,29 @@
 # Mary Christine Sacay - Web Dev II - Portfolio
 
 ## Project Explanation
-I started with the design I did in UX Design I class in Figma. For this project I used Bootstrap etc. etc...
+I started with the design I did in UX Design I class in Figma. For this project, I used Bootstrap, among other technologies...
 
 ### Challenges
-- Using Bootstrap for the first time
-- Using JS library for scroll
-- Layout issues with the projects page 
-- etc. etc.
+- Using Bootstrap for the first time.
+- Implementing a JavaScript library for a toggle mobile navbar.
+- Resolving layout issues on the projects page.
 
 ### Lessons Learned
-- Using Bootstrap grid effectively
-- How to add libraries to your project
-- etc. etc.
+- Bootstrap
+  - Mastering the use of Bootstrap's grid system.
+  - Understanding Bootstrap's component library.
+- JavaScript and Libraries
+  - How to add libraries to your project.
+  - Simplifying complex functions using jQuery.
+- General Web Development
+  - Ensuring responsive design across various devices.
+  - Effective debugging techniques using browser dev tools.
 
 ## Libraries Used
-- [Bootstrap](https://getbootstrap.com/)
-- [AnimateOnScroll](https://michalsnik.github.io/aos/)
+- [Bootstrap](https://getbootstrap.com/) - For responsive design and UI components.
+- [jQuery](https://api.jquery.com/) - Used for simplifying JavaScript operations.
 
 ## External Resources
-- [Images from Unsplash](https://unsplash.com/)
-- [Google Fonts](https://fonts.google.com/specimen/Roboto) 
+- [Google Fonts](https://fonts.google.com/specimen/Inter) - Used for custom typography.
+- [Font Awesome](https://fontawesome.com/) - Used for adding icons and vector graphics.
 
-## Logo
-![placeholder](https://placekitten.com/200/200)
