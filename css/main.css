@@ -55,15 +55,13 @@ table {
 
 :root {
   /* Color scheme */
-  --primary-color: #ecebff;
-  --secondary-color: #yourSecondaryColor;
+  --primary-color: #dcdeff;
+  --secondary-color: #F6EAFF;
   --background-color: #fff;
   --text-color: #333;
   --button-color: #6c63ff;
   --button-hover-color: #5349ff;
   --footer-background-color: #f8f9fa;
-
-  /* Spacing and layout */
   --section-padding: 20px;
   --container-width: 1200px;
   --border-radius: 8px;
@@ -74,8 +72,8 @@ table {
 /* General Styles */
 body {
     font-family: 'Inter', sans-serif;
-    color: var(--text-color)
-    background-color: (var(--background-color))
+    color: var(--text-color);
+    background: var(--primary-color);
     height: 100%;
   }
   
@@ -83,16 +81,13 @@ body {
 .container {
   padding: 2rem;
   max-width: var(--container-width);
+  line-height: 1.6;
 }
 
 .wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-}
-
-footer.footer {
-  margin-top: auto;
 }
 
 .text-center {
@@ -128,12 +123,17 @@ footer.footer {
 }
 
 .navbar-brand img {
-  height: 40px; /* Adjust as needed */
+  height: 40px;
   width: auto;
 }
 
 .nav-link {
   color: var(--text-color);
+}
+
+.brand-logo img {
+  max-height: 60px;
+  padding: 5px;
 }
 
 /* Hero Section */
@@ -145,18 +145,18 @@ footer.footer {
 }
 
 .hero-section h1 {
-  font-size: 2rem; /* Adjust font-size as needed */
-  margin-bottom: 1rem;
+  font-size: 2rem;
+  margin: 2.5rem;
 }
 
 .hero-section p {
-  font-size: 1.125rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.15rem;
+  margin: 2.5rem;
 }
 
-/* Button */
+/* Button Styling*/
 .btn-primary {
-  background-color: #6c63ff;
+  background-color: var(--button-color);
   border: none;
   padding: 0.75rem 1.5rem; /* Button padding */
   border-radius: 0.5rem; /* Button border-radius */
@@ -170,6 +170,7 @@ footer.footer {
 /* Projects Section */
 .projects-section {
   padding: 4rem; /* Section padding */
+  background-color: var(--background-color);
 }
 
 .projects-page {
@@ -177,19 +178,23 @@ footer.footer {
 }
 
 .projects-section h1 {
-  margin-bottom: 4rem; /* Spacing after the heading */
+  margin: 1rem;
   font-size: 2rem;
   text-align: center;
 }
 
 .projects-section h2 {
-  margin-bottom: 5rem; /* Spacing after each project title */
+  margin: 1rem;
   font-size: 1.5rem;
 }
 
 .projects-section h3 {
-  margin-top: 3rem; /* Spacing before each project title */
+  margin: 2.5rem;
   font-size: 1.25rem;
+}
+
+.projects-section p {
+  margin: 1rem;
 }
 
 .projects-section .btn-secondary {
@@ -208,7 +213,7 @@ footer.footer {
 
 /* Hover effect */
 .projects-section img.img-fluid:hover {
-  transform: scale(1.05); /* Slightly enlarges the image */
+  transform: scale(1.025); /* Slightly enlarges the image */
 }
 
 /* Responsive adjustments */
@@ -219,7 +224,7 @@ footer.footer {
   }
 
   .project-item img {
-    margin-right: 2rem; /* Space to the right of the image */
+    margin: 4rem;
   }
 }
 
@@ -230,7 +235,7 @@ footer.footer {
 }
 
 .about-section h1 {
-  margin: 4rem;
+  margin: 1rem;
   font-size: 2rem;
   text-align: center;
 }
@@ -250,8 +255,8 @@ footer.footer {
 }
 
 .contact-section h1 {
+  margin: 1rem;
   font-size: 2rem;
-  margin-bottom: 4rem; /* Spacing after the heading */
   text-align: center;
 }
 
@@ -261,6 +266,10 @@ footer.footer {
 
 .contact-page {
   background-color: var(--primary-color);
+}
+
+.contact-details {
+  text-align: center;
 }
 
 /* Input Styles */
@@ -277,7 +286,7 @@ textarea {
 input[type="submit"] {
   background-color: #6c63ff; /* Submit button background color */
   color: white; /* Submit button text color */
-  padding: 0.75rem 1.5rem; /* Padding */
+  padding: 0.75rem 1.5rem;
   border: none; /* Remove border */
   border-radius: 0.5rem; /* Border radius */
   cursor: pointer; /* Cursor to indicate clickable */
@@ -288,12 +297,44 @@ input[type="submit"] {
   overflow: auto; 
 }
 
+footer {
+  background-color: var(--background-color);
+}
+
 footer i {
-  
   margin: 5%;
   color: var(--text-color);
 }
 
+footer p {
+  margin: .5rem;
+}
+
+.footer-divider {
+  border: 0; /* Removes default border */
+  height: 1px; /* Sets the height of the line */
+  background-color: #333; /* Sets the color of the line */
+  margin: 0;
+}
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #6c63ff; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+}
+
+#myBtn:hover {
+  background-color: #5349ff; /* Add a dark-grey background on hover */
+}
 
 /* ----Media Queries---- */
 /* Small devices (landscape phones, 576px and up) */
@@ -306,7 +347,7 @@ footer i {
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
   .hero-section h1 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -324,6 +365,3 @@ footer i {
     font-size: 2rem;
   }
 }
-
-
-

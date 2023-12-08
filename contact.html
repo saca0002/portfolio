@@ -22,7 +22,7 @@
       <!-- Skip Links -->
       <ul class="skip-links">
         <li class="skip-link-item">
-          <a href="#main" aria-label="Skip to Main Section">Skip to Main Content</a>
+          <a href="#main" aria-label="Skip to Contact Form">Skip to Main Content</a>
         </li>
         <li class="skip-link-item">
           <a href="#footer" aria-label="Skip to Footer">Skip to Footer</a>
@@ -51,13 +51,14 @@
 
     </header>
 
-    <main>
+    <main id="main">
       <!-- Contact Section -->
       <section class="contact-section contact-page">
         <div class="container">
           <h1>Contact</h1>
           <p>I'd love to hear from you!</p>
-          <p>Whether you have a project in mind, a question about my work, or just want to chat about government web development, please don't hesitate to reach out.</p>
+          <p>Whether you have a project in mind, a question about my work, or just want to chat about web development over coffee, please don't hesitate to reach out.</p>
+        
           <form>
             <div class="form-group">
               <label for="name">Name</label>
@@ -68,27 +69,74 @@
               <input type="email" class="form-control" id="email" placeholder="juandelacruz@email.com">
             </div>
             <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="fixed-size-textarea" class="form-control" rows="3" placeholder="Type message here"></textarea>
+              <label for="fixed-size-textarea">Message</label>
+              <textarea id="fixed-size-textarea" class="form-control" rows="3" placeholder="Hi MC,"></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Send</button>
           </form>
+
+          <div class="contact-details container" itemscope itemtype="http://schema.org/ContactPage">
+            <ul>
+              <li itemprop="name">MC Sacay</li>
+              <li itemscope itemtype="http://schema.org/PostalAddress">
+                <span itemprop="streetAddress">1385 Woodroffe Ave</span>,
+                <span itemprop="addressLocality">Ottawa</span>,
+                <span itemprop="addressRegion">ON</span>
+                <span itemprop="postalCode">K2G 1V8</span>,
+                <span itemprop="addressCountry">Canada</span>
+              </li>
+              <li itemscope itemtype="http://schema.org/ContactPoint">
+                Phone: <span itemprop="telephone">+1 613 123 4567</span>
+                Email: <span itemprop="email">saca0002@algonquinlive.com</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
     </main>
   </div>
 
+
   <!-- Footer -->
-  <footer class="footer text-center">
+  <hr class="footer-divider">
+  <footer class="footer text-center" id="footer">
     <div class="container">
-      <a href="https://facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-      <a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a>
-      <a href="https://linkedin.com"><i class="fa-brands fa-linkedin-in"></i></a>
-    </div>
+      <div class="grid">
+        <div class="g-col-12">
+          <a href="https://facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a>
+          <a href="https://linkedin.com"><i class="fa-brands fa-linkedin-in"></i></a>
+          <p>&copy; 2023 MC Sacay</p>
+        </div>
+      </div>
+    </div> 
   </footer>
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-angle-up"></i></button>
 
   <!-- Bootstrap JS and dependencies -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JavaScript for Scroll to Top Button -->
+  <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+      } else {
+        document.getElementById("myBtn").style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+  </script>
+
 </body>
 </html>
